@@ -18,6 +18,23 @@ class JournalsController < ApplicationController
         redirect_to journal
     end
 
+    def edit
+        @journal = Journal.find params[:id]
+    end
+
+    def update
+        journal = Journal.find params[:id]
+        journal.update journal_params
+        redirect_to journal
+    end
+
+    def destroy
+        journal = Journal.find params[:id]
+        journal.destroy
+        redirect_to journals_path
+    end
+
+
     private
 
     def journal_params
