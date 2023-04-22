@@ -1,0 +1,14 @@
+<h1><%= @journal.name %></h1>
+
+<% @journal.plants.each do |plant| %>
+    
+    <%= image_tag plant.image %>
+    <ul>
+        <li>Name: <%= plant.name %></li>
+        <li>Species: <%= plant.species %></li>
+        <li>Last watered: <%= plant.last_watered %></li>
+        <li>Cycle: <%= plant.cycle %> days</li>
+    </ul>
+    
+
+<% end %>
