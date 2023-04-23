@@ -4,7 +4,6 @@
         <title>PlantDiaryApp</title>
         <%= csrf_meta_tags %>
         <%= csp_meta_tag %>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
@@ -13,6 +12,7 @@
         <nav>
             <% if @current_user.present? %>
                 <%= link_to "My Journals", journals_path %>
+                <%= link_to "My Plants", plants_path %>
                 <%= link_to "Log out #{ @current_user.nickname }", login_path, :method => :delete %>
             <% else %>
                 <%= link_to 'Sign Up!', new_user_path %>

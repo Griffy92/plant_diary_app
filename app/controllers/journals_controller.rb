@@ -9,6 +9,10 @@ class JournalsController < ApplicationController
         @journal = Journal.find params[:id]
     end
 
+    def edit
+        @journal = Journal.find params[:id]
+    end
+
     def new
         @journal = @current_user.journals.new
     end
@@ -16,10 +20,6 @@ class JournalsController < ApplicationController
     def create
         journal = @current_user.journals.create journal_params
         redirect_to journal
-    end
-
-    def edit
-        @journal = Journal.find params[:id]
     end
 
     def update

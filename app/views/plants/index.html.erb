@@ -1,0 +1,10 @@
+<h1>My Plants</h1>
+
+<%# This page shows the unique plants that each user has%>
+
+<% @plants.uniq.each do |plant| %>
+    
+    <%= image_tag plant.image, :class => 'thumb' %>
+   <div><%= link_to plant.name, plant %></div>
+
+<% end %>

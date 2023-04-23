@@ -1,0 +1,11 @@
+.thumb {
+    height: 10em;
+    width: auto;
+    border: 1px solid black;
+}
+
+.feature {
+    height: 20em;
+    width: auto;
+    border: 1px solid black;
+}

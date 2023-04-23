@@ -1,17 +1,16 @@
+<%# Individual contents of journal i.e. shows plant info  %>
 <h1><%= @journal.name %></h1>
 
+<%# Controllers %>
 <%= link_to 'Edit', edit_journal_path %>
 <%= link_to 'Delete', @journal, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
 
 <% @journal.plants.each do |plant| %>
-    
-    <%= image_tag plant.image %>
+
+    <%= link_to image_tag(plant.image, :class => 'thumb'), plant %>
     <ul>
         <li>Name: <%= plant.name %></li>
-        <li>Species: <%= plant.species %></li>
-        <li>Last watered: <%= plant.last_watered %></li>
-        <li>Cycle: <%= plant.cycle %> days</li>
+        <li>Idea - maybe I somehow show when it next needs to be watered instead</li>
     </ul>
     
-
 <% end %>

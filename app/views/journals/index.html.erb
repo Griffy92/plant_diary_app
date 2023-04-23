@@ -1,9 +1,9 @@
+<%# Shows all journals that belong to the user %>
 <h1>All journals</h1>
 
 <% @current_user.journals.each do |journal| %>
-
+    <%# Link to view the content of individual journals %>
     <h3><%= link_to journal.name, journal %></h1>
-
 <% end %>
 
 <%= link_to 'Create a new Journal', new_journal_path %>

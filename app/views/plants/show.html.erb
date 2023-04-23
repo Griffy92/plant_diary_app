@@ -1,0 +1,10 @@
+<h1><%= @plant.name %></h1>
+
+<%= image_tag @plant.image, :class => 'feature' %>
+
+    <ul>
+        <li>Name: <%= @plant.name %></li>
+        <li>Species: <%= @plant.species %></li>
+        <li>Last watered: <%= @plant.last_watered %></li>
+        <li>Cycle: <%= @plant.cycle %> days</li>
+    </ul>
