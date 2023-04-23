@@ -1,6 +1,8 @@
 <h1><%= @plant.name %></h1>
 
-<%= image_tag @plant.image, :class => 'feature' %>
+<% if @plant.image.present? %>
+    <%= image_tag @plant.image, :class => 'feature' %>
+<% end %>
 
     <ul>
         <li>Name: <%= @plant.name %></li>

@@ -1,0 +1,31 @@
+<%= form_for @plant do |f| %>
+
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name, :required => true %>
+    </div>
+
+    <div>
+        <%= f.label :species %>
+        <%= f.text_field :species %>
+    </div>
+
+    <div>
+        <%= f.label :last_watered %>
+        <%= f.date_field :last_watered %>
+    </div>
+
+    <div>
+        <%= f.label :cycle, "In days" %>
+        <%= f.number_field :cycle %>
+    </div>
+
+    <div>
+        Select which journal your plant goes to:
+        <%= f.collection_check_boxes :journal_ids, @current_user.journals.all, :id, :name %>
+    </div>
+
+    <div>
+        <%= f.submit %>
+    </div>
+<% end %>

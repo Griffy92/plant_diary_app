@@ -1,10 +1,15 @@
 <h1>My Plants</h1>
-
 <%# This page shows the unique plants that each user has%>
+
+<div>
+    <%= link_to 'Create a plant!', new_plant_path %>
+</div> 
 
 <% @plants.uniq.each do |plant| %>
     
-    <%= image_tag plant.image, :class => 'thumb' %>
+    <% if plant.image.present? %>
+        <%= image_tag plant.image, :class => 'thumb' %>
+    <% end %>
    <div><%= link_to plant.name, plant %></div>
 
 <% end %>
