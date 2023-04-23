@@ -34,6 +34,10 @@ puts "Users and Journals"
 u1.journals << j1 << j2
 u2.journals << j3
 
+puts "Users and Plants"
+u1.plants << p1 << p2 << p3 << p4 << p5 << p6
+u2.plants << p7 << p8 << p9 << p10
+
 puts "Plants and Journals"
 j1.plants << p1 << p2 << p3 << p6
 j2.plants << p2 << p3 << p4 << p5
