@@ -10,6 +10,13 @@ class PlantsController < ApplicationController
 	end
 
 	def edit
+		@plant = @current_user.plants.find params[:id]
+	end
+
+	def update
+		plant = @current_user.plants.find params[:id]
+		plant.update plant_params
+		redirect_to plant_path
 	end
 
 	def new
@@ -30,6 +37,10 @@ class PlantsController < ApplicationController
 	private
 
 	def plant_params
-		params.require(:plant).permit(:name, :species, :last_watered, :cycle, :journals_attributes => :name)
+		params.require(:plant).permit(:name, :species, :last_watered, :cycle, :journal_ids => [])
+	end
+
+	#gets an image from plant API if empty
+	def get_image
 	end
 end

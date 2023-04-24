@@ -6,8 +6,9 @@
 <%= link_to 'Delete', @journal, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
 
 <% @journal.plants.each do |plant| %>
-
-    <%= link_to image_tag(plant.image, :class => 'thumb'), plant %>
+    <% if plant.image.present? %>
+        <%= link_to image_tag(plant.image, :class => 'thumb'), plant %>
+    <% end %>
     <ul>
         <li>Name: <%= plant.name %></li>
         <li>Idea - maybe I somehow show when it next needs to be watered instead</li>

@@ -34,7 +34,6 @@ class JournalsController < ApplicationController
         redirect_to journals_path
     end
 
-
     private
 
     def journal_params
