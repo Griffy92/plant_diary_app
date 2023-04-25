@@ -21,6 +21,6 @@
 require 'json'
 require 'httparty'
 
-every 1.minute do
+every 1.hour do
     rake "send_alerts"
 end

@@ -1,0 +1,29 @@
+.nav-color {
+    background-color: #8aeba4;
+}
+
+.img-thumb {
+    max-width: 300px;
+    height: auto;
+}
+
+.img-feature {
+    max-width: 300px;
+    height: auto;
+}
+
+.journal-div {
+    background-image: url('/assets/greenhouse.jpg');
+}
+
+.figure:first-of-type {
+    margin: 3em 2em;
+}
+
+.figure {
+    margin: 0.5em 2em;
+}
+
+.journal-control {
+    padding: 1em 0.2em;
+}

@@ -1,18 +1,26 @@
-<h1>Login</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-4">
+            <h2>Login</h2>
+            <% if flash[:error].present? %>
+                <h2><%= flash[:error] %></h2>
+            <% end %>
 
+            <%= form_tag login_path do %>
 
-<% if flash[:error].present? %>
-    <h2><%= flash[:error] %></h2>
-<% end %>
+                <%= label_tag :email, nil, :class => 'form-label' %>
+                <%= email_field_tag :email, nil, :class => 'form-control' %>
 
-<%= form_tag login_path do %>
+                <%= label_tag :password, nil, :class => 'form-label' %>
+                <%= password_field_tag :password, nil, :class => 'form-control' %>
 
-    <%= label_tag :email %>
-    <%= email_field_tag :email %>
+                <%= submit_tag 'Login', :class => 'btn btn-success btn-lrg' %>
 
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
+            <% end %>
+        </div>  
+        <div class="col-2"></div>
+    
+    </div>
 
-    <%= submit_tag 'Login' %>
-
-<% end %>
+</div>

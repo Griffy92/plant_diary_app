@@ -35,12 +35,17 @@ class PlantsController < ApplicationController
 	end
 
 	private
-
 	def plant_params
 		params.require(:plant).permit(:name, :species, :last_watered, :cycle, :journal_ids => [])
 	end
 
 	#gets an image from plant API if empty
 	def get_image
+		pecies = params[:species]
+		
+		# gets image from perenual
+    	@plant_info = HTTParty.get("https://perenual.com/api/species-list?key=sk-VeBB6444cc96d5119584&q=#{species}")
+		# link below is image
+		@plant_info["data"][0]["default_image"]["medium_url"]
 	end
 end
