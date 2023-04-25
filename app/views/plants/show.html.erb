@@ -1,3 +1,12 @@
+<ul class="nav nav-tabs journal-control">
+    <% if @current_user.present? %>
+        <li class="nav-item">
+            <%= link_to "Edit", edit_plant_path %>
+            <%= link_to 'Delete', @plant, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+        </li>
+    <% end %>
+</ul>
+
 <h1><%= @plant.name %></h1>
 
 <% if @plant.image.present? %>
@@ -10,5 +19,3 @@
         <li>Last watered: <%= @plant.last_watered %></li>
         <li>Cycle: <%= @plant.cycle %> days</li>
     </ul>
-
-<%= link_to "Edit", edit_plant_path %>
