@@ -15,6 +15,11 @@ class PlantsController < ApplicationController
 
 	def update
 		plant = @current_user.plants.find params[:id]
+		
+		if @plant.image.nil? 
+			@plant.image = get_image
+		end
+
 		plant.update plant_params
 		redirect_to plant_path
 	end
@@ -26,6 +31,10 @@ class PlantsController < ApplicationController
 
 	def create
 		@plant = @current_user.plants.build plant_params
+
+		if @plant.image.nil? 
+			@plant.image = get_image
+		end
 
 		if @plant.save 
 			redirect_to @plant
@@ -41,11 +50,10 @@ class PlantsController < ApplicationController
 
 	#gets an image from plant API if empty
 	def get_image
-		pecies = params[:species]
-		
-		# gets image from perenual
-    	@plant_info = HTTParty.get("https://perenual.com/api/species-list?key=sk-VeBB6444cc96d5119584&q=#{species}")
+		# gets image from perenual with the species 
+    	plant_info = HTTParty.get("https://perenual.com/api/species-list?key=sk-VeBB6444cc96d5119584&q=#{@plant.species}")
 		# link below is image
-		@plant_info["data"][0]["default_image"]["medium_url"]
+		plant_image = plant_info["data"][0]["default_image"]["medium_url"]
 	end
+
 end

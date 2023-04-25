@@ -1,9 +1,12 @@
-<h1>My Plants</h1>
-<%# This page shows the unique plants that each user has%>
+<ul class="nav nav-tabs journal-control">
+    <% if @current_user.present? %>
+        <li class="nav-item">
+            <%= link_to 'Create a plant!', new_plant_path %>
+        </li>
+    <% end %>
+</ul>
 
-<div>
-    <%= link_to 'Create a plant!', new_plant_path %>
-</div> 
+<%# This page shows the unique plants that each user has%>
 
 <% @plants.uniq.each do |plant| %>
     

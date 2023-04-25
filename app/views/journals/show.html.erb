@@ -1,13 +1,19 @@
 <%# Individual contents of journal i.e. shows plant info  %>
-<h1><%= @journal.name %></h1>
 
-<%# Controllers %>
-<%= link_to 'Edit', edit_journal_path %>
-<%= link_to 'Delete', @journal, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+<ul class="nav nav-tabs journal-control">
+    <% if @current_user.present? %>
+        <li class="nav-item">
+            <%= link_to 'Edit', edit_journal_path %>
+            <%= link_to 'Delete', @journal, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+        </li>
+    <% end %>
+</ul>
+
+<h1><%= @journal.name %></h1>
 
 <% @journal.plants.each do |plant| %>
     <% if plant.image.present? %>
-        <%= link_to image_tag(plant.image, :class => 'thumb'), plant %>
+        <%= link_to image_tag(plant.image, :class => 'img-thumb'), plant %>
     <% end %>
     <ul>
         <li>Name: <%= plant.name %></li>
