@@ -18,9 +18,9 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-require 'json'
-require 'httparty'
+# require 'json'
+# require 'httparty'
 
-every 1.hour do
-    rake "send_alerts"
-end
+# every 1.hour do
+#     rake "send_alerts"
+# end

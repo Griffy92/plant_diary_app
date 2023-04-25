@@ -1,31 +1,36 @@
 <%= form_for @plant do |f| %>
-
     <div>
-        <%= f.label :name %>
-        <%= f.text_field :name, :required => true %>
+        <%= f.label :name, :class => 'form-label' %>
+        <%= f.text_field :name, :required => true, :class => 'form-control' %>
     </div>
 
     <div>
-        <%= f.label :species %>
-        <%= f.text_field :species %>
+        <%= f.label :species, :class => 'form-label' %>
+        <%= f.text_field :species, :class => 'form-control'%>
     </div>
 
     <div>
-        <%= f.label :last_watered %>
-        <%= f.date_field :last_watered %>
+        <%= f.label :last_watered, :class => 'form-label' %>
+        <%= f.date_field :last_watered, :class => 'form-control' %>
     </div>
 
     <div>
-        <%= f.label :cycle, "In days" %>
-        <%= f.number_field :cycle %>
+        <%= f.label :cycle, "In days", :class => 'form-label' %>
+        <%= f.number_field :cycle, :class => 'form-control' %>
     </div>
 
     <div>
+        <%= f.label :image, :class => 'form-label' %>
+        <%= f.url_field :image, :class => 'form-control' %>
+    </div>
+
+    <div>
+        <br>
         Select which journal your plant goes to:
-        <%= f.collection_check_boxes(:journal_ids, @current_user.journals.all, :id, :name) %>
+        <div><%= f.collection_check_boxes(:journal_ids, @current_user.journals.all, :id, :name) %></div>
     </div>
 
     <div>
-        <%= f.submit %>
+        <%= f.submit :class => 'btn btn-success' %>
     </div>
 <% end %>

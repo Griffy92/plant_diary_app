@@ -1,26 +1,18 @@
-<div class="container">
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-4">
-            <h2>Login</h2>
-            <% if flash[:error].present? %>
-                <h2><%= flash[:error] %></h2>
-            <% end %>
+<h2>Login</h2>
 
-            <%= form_tag login_path do %>
+<%= form_tag login_path do %>
 
-                <%= label_tag :email, nil, :class => 'form-label' %>
-                <%= email_field_tag :email, nil, :class => 'form-control' %>
+    <%= label_tag :email, nil, :class => 'form-label' %>
+    <%= email_field_tag :email, nil, :class => 'form-control' %>
 
-                <%= label_tag :password, nil, :class => 'form-label' %>
-                <%= password_field_tag :password, nil, :class => 'form-control' %>
+    <%= label_tag :password, nil, :class => 'form-label' %>
+    <%= password_field_tag :password, nil, :class => 'form-control' %>
 
-                <%= submit_tag 'Login', :class => 'btn btn-success btn-lrg' %>
+    <%= submit_tag 'Login', :class => 'btn btn-success btn-lrg' %>
 
-            <% end %>
-        </div>  
-        <div class="col-2"></div>
-    
-    </div>
+<% end %>
 
-</div>
+<% if flash[:error].present? %>
+    <p><%= flash[:error] %></p>
+<% end %>
+
