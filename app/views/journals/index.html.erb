@@ -13,7 +13,7 @@
             <div class="d-flex align-items-center flex-wrap">
                 <% @current_user.journals.each do |journal| %>
                     <figure class="figure">
-                        <%= image_tag "greenhouse.jpg", :class => 'figure-img img-fluid rounded img-thumb' %>
+                        <!-- <%= image_tag "greenhouse.jpg", :class => 'figure-img img-fluid rounded img-thumb' %> -->
                         <figcaption class="figure-caption text-center"><%= link_to journal.name, journal %></figcaption>
                     </figure>
                 <% end %>     
