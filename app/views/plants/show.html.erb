@@ -1,21 +1,36 @@
 <ul class="nav nav-tabs journal-control">
     <% if @current_user.present? %>
+        <li>
+            <%= @plant.name %>
+        </li>
+        |
         <li class="nav-item">
             <%= link_to "Edit", edit_plant_path %>
+        </li>
+        <li class="nav-item">
             <%= link_to 'Delete', @plant, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
         </li>
+        |
     <% end %>
 </ul>
 
-<h1><%= @plant.name %></h1>
+<div class="container">
+    <div class="row">
+        <div class="col-10 text-center">        
 
-<% if @plant.image.present? %>
-    <%= image_tag @plant.image, :class => 'img-feature' %>
-<% end %>
+            <% if @plant.image.present? %>
+                <%= image_tag @plant.image, :class => 'img-feature' %>
+            <% end %>
 
-<ul>
-    <li>Name: <%= @plant.name %></li>
-    <li>Species: <%= @plant.species %></li>
-    <li>Last watered: <%= @plant.last_watered %></li>
-    <li>Cycle: <%= @plant.cycle %> days</li>
-</ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-9 text-left">
+            <p><span class="span-bold">Name:</span><%= @plant.name %></p>
+            <p><span class="span-bold">Species:</span> <%= @plant.species %></p>
+            <p><span class="span-bold">Last watered:</span> <%= @plant.last_watered %></p>
+            <p><span class="span-bold">Cycle:</span> <%= @plant.cycle %> days</p>
+        </div>
+    </div>
+</div>

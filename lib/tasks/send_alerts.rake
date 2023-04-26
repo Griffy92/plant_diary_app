@@ -1,5 +1,7 @@
 namespace :alerts do 
     task :send_alerts => :environment do 
+
+        
         payload = {}
         payload[:content] = 'Water your plants'
         payload.to_json

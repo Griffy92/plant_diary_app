@@ -27,3 +27,23 @@
 .journal-control {
     padding: 1em 0.2em;
 }
+
+ul.journal-control > li {
+    margin: 0 1em 0 1em
+}
+
+.row {
+    margin-top: 3em;
+}
+
+.span-bold {
+    font-weight: bold;
+    text-align: left;
+}
+
+@media (min-width: 1000px) {
+    .img-feature {
+        max-width: 600px;
+        height: auto;
+    }
+}
