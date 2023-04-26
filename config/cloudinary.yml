@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dnayuurnt
+  api_key: '562638333214855'
+  api_secret: 6okbWw6Gh_mYIM1hvWQndU8CFdA
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dnayuurnt
+  api_key: '562638333214855'
+  api_secret: 6okbWw6Gh_mYIM1hvWQndU8CFdA
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dnayuurnt
+  api_key: '562638333214855'
+  api_secret: 6okbWw6Gh_mYIM1hvWQndU8CFdA
+  enhance_image_tag: true
+  static_file_support: false

@@ -19,7 +19,7 @@
         <div class="col-10 text-center">        
 
             <% if @plant.image.present? %>
-                <%= image_tag @plant.image, :class => 'img-feature' %>
+                <%= cl_image_tag @plant.image, :class => 'img-feature' %>
             <% end %>
 
         </div>

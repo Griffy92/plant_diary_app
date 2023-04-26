@@ -14,7 +14,7 @@
                 <% @plants.uniq.each do |plant| %> 
                         <figure class="figure">
                             <% if plant.image.present? %>
-                                <%= image_tag plant.image, :class => 'img-thumb' %>
+                                <%= cl_image_tag plant.image, :class => 'img-thumb' %>
                             <% end %>
                             <figcaption class="figure-caption text-center"><%= link_to plant.name, plant %></figcaption>
                         </figure>

@@ -16,12 +16,8 @@
     background-image: url('/assets/greenhouse.jpg');
 }
 
-.figure:first-of-type {
-    margin: 3em 2em;
-}
-
 .figure {
-    margin: 0.5em 2em;
+    margin: 1em 1em;
 }
 
 .journal-control {
@@ -46,4 +42,11 @@ ul.journal-control > li {
         max-width: 600px;
         height: auto;
     }
+}
+
+.masthead {
+    background-image: url('/assets/masthead.jpeg');
+    background-size: cover;
+    background-repeat: none;
+
 }

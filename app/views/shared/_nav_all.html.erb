@@ -1,5 +1,20 @@
 <!-- This is the navigation that exists in every page -->
-<ul class="nav nav-tabs nav-color">
+<!-- 
+<div class="masthead">
+    <h1 class="fw-light">Vertically Centered Masthead Content</h1>
+</div>
+-->
+
+<div class="p-5 text-center bg-image" style="background-image: url('/assets/masthead.jpeg'); height: 200px;">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+                <h1 class="my-3">Plant Diary</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<ul class="nav nav-tabs nav-color opacity-75">
     <% if @current_user.present? %>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Welcome, <%= @current_user.nickname %></a>

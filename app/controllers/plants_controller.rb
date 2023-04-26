@@ -33,6 +33,12 @@ class PlantsController < ApplicationController
 	def create
 		@plant = @current_user.plants.build plant_params
 
+		if params[:file].present?
+			req = Cloudinary::Uploader.upload(params[:file])
+			@plant.image = req["public_id"]
+			@plant.save
+		end
+
 		# fetch plant image from perenual api if no input
 		if @plant.image.nil? 
 			@plant.image = get_image
