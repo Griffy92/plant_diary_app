@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
     <head>
-        <title>PlantDiaryApp</title>
+        <title>Plant Diary</title>
         <%= csrf_meta_tags %>
         <%= csp_meta_tag %>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,7 @@
         <%= cloudinary_js_config %>
     </head>
 
-    <body>
+    <body class="d-flex flex-column h-100">
         <%= render :partial => 'shared/nav_all' %>
     
         <div class="container">
