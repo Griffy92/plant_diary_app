@@ -1,24 +1,26 @@
-# README
+# Plant Diary
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Introduction
 
-Things you may want to cover:
+This is the second project of my GA Software Engineering Immersive course. idea of a plant diary application comes from personal experiences of accidentally murdering my plants.
 
-* Ruby version
+## Technologies
+- Ruby on Rails 5.2.8.1
+- Bcrypt 3.1.7
+- Cloudinary
+- Bootstrap
+- Plenuary API
+- Discord Webhook
 
-* System dependencies
+## Features
+- 
 
-* Configuration
+## Roadmap
+-
 
-* Database creation
+## How to
+-
 
-* Database initialization
+## Acknowledgements
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Massive thank you to Joel, CJ, Mark and Tina for all your help with this project!
