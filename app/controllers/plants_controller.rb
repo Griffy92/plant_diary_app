@@ -27,12 +27,12 @@ class PlantsController < ApplicationController
 
 	def new
 		@plant = @current_user.plants.new
-		@journal = @plant.journals.build
 	end
 
 	def create
 		@plant = @current_user.plants.build plant_params
-
+		
+		# cloudinary upload
 		if params[:file].present?
 			req = Cloudinary::Uploader.upload(params[:file])
 			@plant.image = req["public_id"]
@@ -43,7 +43,8 @@ class PlantsController < ApplicationController
 		if @plant.image.nil? 
 			@plant.image = get_image
 		end
-
+		
+		# check if plant save appropriatey otherwise redirect
 		if @plant.save 
 			redirect_to @plant
 		else
@@ -64,7 +65,7 @@ class PlantsController < ApplicationController
 
 	#gets an image from plant API if empty
 	def get_image
-		api_key = ''
+		api_key = 'sk-VeBB6444cc96d5119584&q'
 		# gets image from perenual with the species 
     	plant_info = HTTParty.get("https://perenual.com/api/species-list?key=#{api_key}=#{@plant.species}")
 		# link below is image
