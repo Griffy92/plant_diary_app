@@ -10,7 +10,4 @@ class ApplicationController < ActionController::Base
     def check_for_login 
         redirect_to root_path unless @current_user.present?
     end
-
-    # function to check ownership i.e. making sure user 1 can only access their journals and not others by changing the URL.
-
 end

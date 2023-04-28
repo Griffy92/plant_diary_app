@@ -64,8 +64,9 @@ class PlantsController < ApplicationController
 
 	#gets an image from plant API if empty
 	def get_image
+		api_key = ''
 		# gets image from perenual with the species 
-    	plant_info = HTTParty.get("https://perenual.com/api/species-list?key=sk-VeBB6444cc96d5119584&q=#{@plant.species}")
+    	plant_info = HTTParty.get("https://perenual.com/api/species-list?key=#{api_key}=#{@plant.species}")
 		# link below is image
 		plant_image = plant_info.dig "data", 0, "default_image", "medium_url"
 	end

@@ -1,7 +1,7 @@
 namespace :alerts do 
     task :send_alerts => :environment do 
         
-        # Function to work out if date needs watering.
+        # Function to work out if plant needs watering.
         def needs_watering? date_str, cycle
             
             # Gives me year month day in an array
@@ -37,7 +37,8 @@ namespace :alerts do
             # check to see if webhook URL avail
             unless j.discord.nil?
 
-                discord = j.discord
+                discord = j.discord 
+                # loop through plants to check if needs watering
                 j.plants.each do |plant|
                     if needs_watering?(plant.last_watered, plant.cycle)
                         message = "#{plant.name} needs watering."

@@ -1,10 +1,6 @@
 <!-- This is the navigation that exists in every page -->
-<!-- 
-<div class="masthead">
-    <h1 class="fw-light">Vertically Centered Masthead Content</h1>
-</div>
--->
 
+<!-- Banner -->
 <div class="p-5 text-center bg-image" style="background-image: url('/assets/masthead.jpeg'); height: 200px;">
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
         <div class="d-flex justify-content-center align-items-center h-100">
@@ -14,6 +10,8 @@
         </div>
     </div>
 </div>
+
+<!-- Main Nav -->
 <ul class="nav nav-tabs nav-color opacity-75">
     <% if @current_user.present? %>
         <li class="nav-item dropdown">

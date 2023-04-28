@@ -1,3 +1,4 @@
+<!-- Sub nav -->
 <ul class="nav nav-tabs journal-control">
     <% if @current_user.present? %>
         <li>
@@ -14,14 +15,13 @@
     <% end %>
 </ul>
 
+<!-- Content -->
 <div class="container">
     <div class="row">
         <div class="col-10 text-center">        
-
             <% if @plant.image.present? %>
                 <%= cl_image_tag @plant.image, :class => 'img-feature' %>
             <% end %>
-
         </div>
     </div>
     <div class="row">
