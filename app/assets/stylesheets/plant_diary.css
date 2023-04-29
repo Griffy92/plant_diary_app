@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* MASTHEAD */
+
+/* background image */
+.masthead {
+    background-image: url('masthead_2.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.masthead-title {
+    opacity: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* app name */
+.masthead-title > h1 {
+    color: white;
+    min-width: 100%;
+    font-size: 65px;
+    letter-spacing: 3px;
+}
+
+/* word 'diary' */
+.masthead-title > h1 > span {
+    color: black;
+    opacity: 55%;
+    margin-left: 20px;
+}
+
+@media ( min-width: 600px ) {
+
+    .masthead {
+        min-height: 25vh;
+    }
+
+    .masthead-title > h1 {
+        font-size: 90px;
+    }
+}
+
+/* MAIN NAV BAR */
+
+nav {
+    background-color: #0EE681;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-container {
+    max-width: 1060px;
+    height: 50px;
+    background-color: black;
+}
+
+
