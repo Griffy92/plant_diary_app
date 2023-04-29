@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Cantora One', sans-serif;
 }
 
 /* MASTHEAD */
@@ -52,16 +53,73 @@
 
 /* MAIN NAV BAR */
 
-nav {
+/* full screen nav bar */
+.nav-menu {
     background-color: #0EE681;
+    opacity: 75%;
     display: flex;
     justify-content: center;
 }
 
 .nav-container {
-    max-width: 1060px;
-    height: 50px;
-    background-color: black;
+    min-width: 60%;
+    display: flex;
+    justify-content: space-between;
 }
+
+.menu-pages {
+    display: flex;
+    align-items: center;
+}
+
+/*  */
+.menu-user {
+    display: flex;
+    align-items: center;
+}
+
+.menu-item {
+    list-style-type: none;
+    padding: 5px 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.down-arrow {
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0EE681;
+    margin-top: 5px;
+    min-width: 148px;
+    padding: 0px 10px;
+    z-index: 999;
+    border-top: solid 1px white;
+}
+
+.dropdown > a {
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
 
 
