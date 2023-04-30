@@ -66,7 +66,6 @@
     min-width: 60%;
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 2px white;
 }
 
 .menu-pages {
@@ -141,6 +140,7 @@
     min-width: 60%;
     display: flex;
     align-items: center;
+    border-top: solid 2px white;
 }
 
 .nav-control-link {

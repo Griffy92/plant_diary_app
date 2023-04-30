@@ -1,19 +1,21 @@
 <!-- Sub nav -->
-<ul class="nav nav-tabs journal-control">
-    <% if @current_user.present? %>
-        <li>
-            <%= @plant.name %>
-        </li>
-        |
-        <li class="nav-item">
-            <%= link_to "Edit", edit_plant_path %>
-        </li>
-        <li class="nav-item">
-            <%= link_to 'Delete', @plant, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
-        </li>
-        |
-    <% end %>
-</ul>
+<div class="nav-control">
+    <div class="nav-control-container">
+        <% if @current_user.present? %>
+            <li class="menu-item">
+                <p class="nav-control-text"><%= @plant.name %></p>
+            </li>
+            <span class="nav-control-dividers">|</span>
+            <li class="menu-item">
+                <%= link_to "Edit", edit_plant_path, :class => 'nav-control-link' %>
+            </li>
+            <li class="menu-item">
+                <%= link_to 'Delete', @plant, :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => 'nav-control-link' %>
+            </li>
+            <span class="nav-control-dividers">|</span>
+        <% end %>
+    </div>
+</div>
 
 <!-- Content -->
 <div class="container">
