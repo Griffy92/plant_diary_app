@@ -1,23 +1,25 @@
 <%# Individual contents of journal i.e. shows plant info  %>
 <!-- Sub nav -->
-<ul class="nav nav-tabs journal-control">
-    <% if @current_user.present? %>
-        <li>
-            <%= @journal.name %>
-        </li>
-        |
-        <li class="nav-item">
-            <%= link_to 'Edit', edit_journal_path, :class => 'text-decoration-none' %>
-        </li>
-        <li class="nav-item">
-            <%= link_to 'Delete', @journal, :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => 'text-decoration-none' %>
-        </li>
-        |
-        <li class="nav-item">
-            <%= link_to 'Add Plant', new_plant_path, :class => 'text-decoration-none' %>
-        </li>
-    <% end %>
-</ul>
+<div class="nav-control">
+    <div class="nav-control-container">
+        <% if @current_user.present? %>
+            <li class="menu-item">
+                <p class="nav-control-text"><%= @journal.name %></p>
+            </li>
+            <span class="nav-control-dividers">|</span>
+            <li class="menu-item">
+                <%= link_to 'Edit', edit_journal_path, :class => 'nav-control-link' %>
+            </li>
+            <li class="menu-item">
+                <%= link_to 'Delete', @journal, :method => 'delete', :data => { :confirm => 'Are you sure?' }, :class => 'nav-control-link' %>
+            </li>
+            <span class="nav-control-dividers">|</span>
+            <li class="menu-item">
+                <%= link_to 'Add Plant', new_plant_path, :class => 'nav-control-link' %>
+            </li>
+        <% end %>
+    </div>
+</div>
 
 <!-- content -->
 <div class="container text-center">

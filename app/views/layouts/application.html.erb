@@ -12,11 +12,11 @@
         <%= cloudinary_js_config %>
     </head>
 
-    <body class="d-flex flex-column h-100">
+    <body>
         <!-- rendering main nav -->
         <%= render :partial => 'shared/nav_all' %>
     
-        <div class="container">
+        <div class="content-container">
             <%= yield %>
         </div>
         <!-- rendering footer -->

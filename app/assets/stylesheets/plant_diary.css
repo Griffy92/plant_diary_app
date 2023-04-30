@@ -49,6 +49,7 @@
     .masthead-title > h1 {
         font-size: 90px;
     }
+
 }
 
 /* MAIN NAV BAR */
@@ -65,6 +66,7 @@
     min-width: 60%;
     display: flex;
     justify-content: space-between;
+    border-bottom: solid 2px white;
 }
 
 .menu-pages {
@@ -78,6 +80,7 @@
     align-items: center;
 }
 
+/* shared with nav-controls */
 .menu-item {
     list-style-type: none;
     padding: 5px 10px;
@@ -89,6 +92,12 @@
     color: white;
 }
 
+.nav-link:hover {
+    color: black;
+    opacity: 80%;
+}
+
+/* unicode down-arrow */
 .down-arrow {
     color: white;
 }
@@ -115,7 +124,46 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
+    /* temp fix */
+    position: relative;
 }
+
+/* SUB NAV CONTROLS  */
+
+.nav-control {
+    background-color: #0ee681;
+    opacity: 75%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-control-container {
+    min-width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-control-link {
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: black;
+    opacity: 80%;
+}
+
+.nav-control-link:hover {
+    color: white;
+}
+
+.nav-control-text {
+    opacity: 80%;
+}
+
+/* "|" */
+.nav-control-dividers {
+    color: black;
+    opacity: 80%;
+}
+
 
 
 

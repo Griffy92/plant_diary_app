@@ -1,12 +1,14 @@
 <!-- Shows all journals that belong to the user -->
 <!-- Sub nav -->
-<ul class="nav nav-tabs journal-control">
-    <% if @current_user.present? %>
-        <li class="nav-item">
-            <%= link_to 'New Journal', new_journal_path, :class => 'text-decoration-none' %>
-        </li>
-    <% end %>
-</ul>
+<div class="nav-control">
+     <div class="nav-control-container">
+        <% if @current_user.present? %>
+            <li class="menu-item">
+                <%= link_to 'New Journal', new_journal_path, :class => 'nav-control-link' %>
+            </li>
+        <% end %>
+     </div>
+</div>
 <!-- content -->
 <div class="container text-center">
     <div class="row">
