@@ -12,6 +12,7 @@
 </div>
 
 <!-- Content -->
+<!-- 
 <div class="container text-center">
     <div class="row">
         <div class="col-12">
@@ -27,4 +28,19 @@
             </div>
         </div>
     </div>
+</div>
+-->
+
+
+
+<div class="grid-container">
+    <div class="grid-item picture-1">
+        <h2>Woody</h2>
+    </div>
+    <% @plants.uniq.each do |plant| %>
+    <div class="grid-item">
+        <%= link_to cl_image_tag(plant.image, :class => 'picture-2'), plant %>
+        <%# <img src="https://i.imgur.com/Xi6iFon.jpg" alt="" class="picture-2"> %>
+    </div>
+    <% end %>
 </div>
