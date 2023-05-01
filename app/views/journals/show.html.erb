@@ -22,20 +22,11 @@
     </div>
 </div>
 
-<!-- content -->
-<div class="container text-center">
-    <div class="row">
-        <div class="col-12">
-            <div class="d-flex align-items-center flex-wrap">
-                <% @journal.plants.each do |plant| %>
-                    <figure class="figure">
-                        <% if plant.image.present? %>
-                            <%= link_to cl_image_tag(plant.image, :class => 'img-thumb'), plant %>
-                        <% end %>
-                        <figcaption class="figure-caption text-center"><%= plant.name %></figcaption>
-                    </figure>
-                <% end %>  
-            </div>
-        </div>
+<!-- Content -->
+<div class="grid-container">
+    <% @journal.plants.each do |plant| %>
+    <div class="grid-item">
+        <%= link_to cl_image_tag(plant.image, :class => 'img-thumb'), plant %>
     </div>
+    <% end %>
 </div>

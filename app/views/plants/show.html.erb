@@ -18,6 +18,7 @@
 </div>
 
 <!-- Content -->
+<!--
 <div class="container">
     <div class="row">
         <div class="col-10 text-center">        
@@ -34,5 +35,21 @@
             <p><span class="span-bold">Last watered:</span> <%= @plant.last_watered %></p>
             <p><span class="span-bold">Cycle:</span> <%= @plant.cycle %> days</p>
         </div>
+    </div>
+</div>
+-->
+
+<div class="feature-grid-container">
+    <div></div>
+    <div class="grid-item">
+        <% if @plant.image.present? %>
+            <%= cl_image_tag @plant.image, :class => 'img-feature' %>
+        <% end %>
+    </div>
+    <div class="grid-item">
+        <p><span class="span-bold">Name:</span><%= @plant.name %></p>
+            <p><span class="span-bold">Species:</span> <%= @plant.species %></p>
+            <p><span class="span-bold">Last watered:</span> <%= @plant.last_watered %></p>
+            <p><span class="span-bold">Cycle:</span> <%= @plant.cycle %> days</p>
     </div>
 </div>

@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #E5E4E2;
+    background-color: #d7d6d5;
 }
 /* MASTHEAD */
 
@@ -168,7 +168,7 @@ body {
     opacity: 80%;
 }
 
-/* PLANTS INDEX PAGE */
+/* PLANTS INDEX & JOURNAL SHOW PAGE */
 
 .grid-container {
     display: grid;
@@ -184,15 +184,7 @@ body {
     border-radius: 7%;
 }
 
-.picture-1 {
-    background-image: url('my_plant.jpg');
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-}
-
-.picture-2 {
+.img-thumb {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -200,8 +192,29 @@ body {
     border-radius: 7%;
 }
 
+/* PLANTS SHOW PAGE */
 
+.feature-grid-container {
+    display: grid;
+    grid-template-columns: 20% 20% 40%;
+    grid-auto-rows: 450px;
+    grid-row-gap: 2.5em;
+    grid-column-gap: 2em;
+    justify-content: center;
+}
 
+.grid-item {
+    /* background-color: red; */
+    border-radius: 7%;
+}
+
+.img-feature {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 7%;
+}
 
 
 
