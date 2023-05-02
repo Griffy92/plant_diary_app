@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 			session[:user_id] = @user.id
 			redirect_to journals_path
 		else
-			render :home
+			render :new
 		end
 	end
 

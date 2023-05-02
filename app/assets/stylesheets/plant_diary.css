@@ -216,6 +216,61 @@ body {
     border-radius: 7%;
 }
 
+/* PLANT & JOURNAL CREATE UPDATE FORMS */
+
+.form-title-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-title {
+    width: 80%;
+    text-align: center;
+    margin: .5em;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-rows {
+    margin-bottom: 1em;
+}
+
+.form-label, .form-control, .form-collection, .form-collection-label {
+    font-size: 20px;
+    width: 100%;
+    display: block;
+}
+
+.form-btn {
+    font-size: 20px;
+    background-color: #0EE681;
+    opacity: 75%;
+    border: solid 1px #0EE681;
+    border-radius: 5%;
+    height: 50px;
+    width: 120px;
+}
+
+/* USER SIGNUP FORM */
+/* re-uses plant and journal form css */
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+}
+
+.error-message {
+    margin-left: 3em;
+    color: red;
+    display: flex;
+    align-items: center;
+}
+
+/* HOME PAGE */
+
 
 
 
