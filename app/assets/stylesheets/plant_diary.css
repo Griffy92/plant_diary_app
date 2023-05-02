@@ -43,18 +43,6 @@ body {
     margin-left: 20px;
 }
 
-@media ( min-width: 600px ) {
-
-    .masthead {
-        min-height: 25vh;
-    }
-
-    .masthead-title > h1 {
-        font-size: 90px;
-    }
-
-}
-
 /* MAIN NAV BAR */
 
 /* full screen nav bar */
@@ -216,6 +204,14 @@ body {
     border-radius: 7%;
 }
 
+.feature-text {
+    margin: 20px 0px;
+}
+
+.span-bold {
+    font-weight: bold;
+}
+
 /* PLANT & JOURNAL CREATE UPDATE FORMS */
 
 .form-title-container {
@@ -271,6 +267,107 @@ body {
 
 /* HOME PAGE */
 
+.home-grid-container {
+    display: grid;
+    grid-template-columns: 20% 40%;
+    grid-auto-rows: 450px;
+    grid-row-gap: 2.5em;
+    grid-column-gap: 2em;
+    justify-content: center;
+}
+
+.home-grid-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5em;
+}
+
+.home-nav-link {
+    text-decoration: underline;
+    color: black;
+}
+
+.home-nav-link:hover {
+    color: white;
+}
+
+.home-message {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/* MEDIA QUERIES */
+
+@media ( min-width: 600px ) {
+
+    .masthead {
+        min-height: 25vh;
+    }
+
+    .masthead-title > h1 {
+        font-size: 90px;
+    }
+
+}
+
+@media ( max-width: 1300px ) {
+    
+   .grid-container {
+        grid-template-columns: 30% 30%;
+    }
+
+    .feature-grid-container {
+        grid-template-columns: 30% 20%;
+    }
+
+    .h-13 {
+        display: none;
+    }
+
+}
 
 
+@media ( max-width: 850px ) {
+
+    .grid-container {
+        grid-template-columns: 50%;
+    }
+
+    .home-grid-container {
+        grid-template-columns: 50%;
+    }
+
+    .feature-grid-container {
+        grid-template-columns: 60%;
+    }
+
+    .home-image {
+        display: none;
+    }
+
+    .h-8 {
+        display: none;
+    }
+
+}
+
+@media ( max-width: 500px ) {
+
+    .grid-container {
+        grid-template-columns: 60%;
+    }
+
+    .home-grid-container {
+        grid-template-columns: 60%;
+    }
+
+    
+    .feature-grid-container {
+        grid-template-columns: 60%;
+    }
+    
+    .h-5{
+        display: none;
+    }
+}
 

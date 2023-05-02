@@ -1,11 +1,10 @@
-
+<!--
 <div class="container">
     <div class="row">
         <div class="col-2"></div>
         <div class="col-6">
             <h1 class="display-1">Water your plants.</h1>
             <p class="mt-3"> 
-                <!-- Hides if user is logged in -->
                 <% unless @current_user.present? %>
                     Log in below or <%= link_to 'sign up', new_user_path %> to play around with the app.
                 <% end %>
@@ -13,11 +12,9 @@
         </div>
         <div class="col-2"></div>
     </div>
-    <!-- Rendering Login form -->
     <div class="row">
         <div class="col-2"></div>
         <div class="col-3">
-            <!-- Hides if user is logged in -->
             <% unless @current_user.present? %>
                 <%= render :partial => 'session/new' %>
             <% end %>
@@ -25,5 +22,20 @@
         <div class="col-2"></div>
     </div>
 </div>
+-->
 
+<div class="home-grid-container">
+    <div class="home-grid-item hide-500">
+        <%= image_tag 'https://i.imgur.com/iSM3Bkp.jpg', :class => 'img-thumb' %>
+    </div>
+
+    <div class="home-grid-item">
+        <h1 class="home-message">Water your plants.</h1>
+        <% unless @current_user.present? %>
+            <p class="home-message">Log in below or <%= link_to 'sign up', new_user_path, :class => 'home-nav-link' %> to play around with the app.</p>
+            <%= render :partial => 'session/new' %>
+        <% end %>
+    </div>
+
+</div>
 

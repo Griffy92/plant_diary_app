@@ -19,20 +19,21 @@
 
 <!-- content -->
 <div class="feature-grid-container">
-    <div></div>
+    <div class="h-5 h-8 h-13"></div>
     <div class="grid-item">
         <% if @plant.image.present? %>
+            <%= @plant.name %>
             <%= cl_image_tag @plant.image, :class => 'img-feature' %>
         <% end %>
     </div>
     <div class="grid-item">
-        <p><span class="span-bold">Name:</span><%= @plant.name %></p>
-            <p><span class="span-bold">Species:</span> <%= @plant.species %></p>
-            <p><span class="span-bold">Last watered:</span> <%= @plant.last_watered %></p>
-            <p><span class="span-bold">Cycle:</span> <%= @plant.cycle %> days</p>
-            <p>Journals:</p>
-            <% @plant.journals.each do |journal| %>
-                <p><%= journal.name %></p>
-            <% end %>
+        <p class="feature-text"><span class="span-bold">Name:</span><%= @plant.name %></p>
+        <p class="feature-text"><span class="span-bold">Species:</span> <%= @plant.species %></p>
+        <p class="feature-text"><span class="span-bold">Last watered:</span> <%= @plant.last_watered %></p>
+        <p class="feature-text"><span class="span-bold">Cycle:</span> <%= @plant.cycle %> days</p>
+        <span class="span-bold">Journals:</span>
+        <% @plant.journals.each do |journal| %>
+            <p class="feature-text"><%= journal.name %></p>
+        <% end %>
     </div>  
 </div>
