@@ -6,8 +6,6 @@ This is the second project of the GA Software Engineering Immersive course.
 
 The idea of a plant diary application comes from personal experiences of accidentally murdering my plants so I wanted to create something that can help me keep track of watering them.
 
-You can find the application [here](http://plant-diary.herokuapp.com/)
-
 ## Technologies
 - Ruby on Rails 5.2.8.1
 - Cloudinary
